@@ -5,6 +5,11 @@
 #include <string>
 #include "data_matrix.hpp"
 
+DataMatrix::~DataMatrix() {
+	delete[] m;
+	delete[] y;
+}
+
 DataMatrix::DataMatrix(const std::string &data_filename, const int n_features,
 const int sample_size) {
 	std::ifstream data_file(data_filename);

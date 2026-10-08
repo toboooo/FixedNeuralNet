@@ -11,6 +11,7 @@ class DataMatrix : public Matrix {
 	DataMatrix(DataMatrix &&other) noexcept : Matrix(other) {}
 	DataMatrix(const std::string &csv_filename, const int n_features,
 	const int sample_size);
+	~DataMatrix();
 };
 
 #endif

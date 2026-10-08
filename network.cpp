@@ -56,7 +56,7 @@ void Matrix::mult_matrix(const Matrix &other, Matrix &output) const {
 			output.m[i*output.cols+j] = elem;
 		}
 	}
-	delete temp_m;
+	delete[] temp_m;
 }
 
 double Matrix::trace() const {
